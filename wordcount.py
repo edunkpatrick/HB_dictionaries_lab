@@ -21,6 +21,9 @@ def word_count(file):
         # iterate over words in file to access each word
         for word in sentence:
             # steps to clean up punctuation, each word individually
+            word = word.rstrip("?")
+            word = word.rstrip(".")
+            word = word.strip(",")
             # for word in phrase:
             # dictionary[word] = dictionary.get(word, 0) + 1
             words_in_sentence[word] = words_in_sentence.get(word, 0) + 1
